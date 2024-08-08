@@ -550,6 +550,7 @@ var closeButton = document.querySelector(".close-button");
 
 function toggleModal() {
     modalpopup.classList.toggle("show-popup-modal");
+      location.reload();
    
 }
 
@@ -559,7 +560,7 @@ function windowOnClick(event) {
     }
     if(event.target=== trigger){
         localStorage.removeItem('cart');
-        location.reload();
+      
     }
 }
 
