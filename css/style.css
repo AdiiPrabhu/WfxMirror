@@ -554,3 +554,33 @@
 .placeorder{
     border: 2px solid black;
 }
+#product-Banana{
+    display: none;
+}
+#product-Grapes{
+    display: none;
+}
+#product-Raspberries{
+    display: none;
+}
+#product-Apricots{
+    display: none;
+}
+#product-Oranges{
+    display: none;
+}
+#product-Brocoli{
+    display: none;
+}
+#product-Potato{
+    display: none;
+}
+.show-fruit-modal {
+    opacity: 1;
+    display:table-row !important ;
+    transform: scale(1.0);
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+  }
