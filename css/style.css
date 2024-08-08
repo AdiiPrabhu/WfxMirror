@@ -498,8 +498,7 @@
 .trigger{
     text-align: center;
   padding: 7px 13px;
-  background: #3e3e3e;
-  color: #fff;
+
   font-size: 15px;
   outline: none;
   border: none;
@@ -525,9 +524,14 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
-  padding: 1rem 1.5rem;
-  width: 24rem;
+  padding: 30px;
+
   border-radius: 0.5rem;
+
+  width: 500px;
+  height: 150px;
+
+
 }
 .close-button {
   float: right;
@@ -546,4 +550,7 @@
   visibility: visible;
   transform: scale(1.0);
   transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+.placeorder{
+    border: 2px solid black;
 }
