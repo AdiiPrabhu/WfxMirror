@@ -69,10 +69,9 @@
                         </div>
                         <div class="d-flex m-3 me-0">
                             <button class="btn-search btn border border-secondary btn-md-square rounded-circle bg-white me-4" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search text-primary"></i></button>
-                            <a href="#" class="position-relative me-4 my-auto">
+                            <a href="cart.html" class="position-relative me-4 my-auto">
                                 <i class="fa fa-shopping-bag fa-2x"></i>
-                                <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">3</span>
-                            </a>
+                                         </a>
                             <a href="#" class="my-auto">
                                 <i class="fas fa-user fa-2x"></i>
                             </a>
@@ -108,9 +107,7 @@
         <div class="container-fluid page-header py-5">
             <h1 class="text-center text-white display-6">Cart</h1>
             <ol class="breadcrumb justify-content-center mb-0">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                <li class="breadcrumb-item active text-white">Cart</li>
+             <button id="clearcart" class="btn border-secondary rounded-pill px-4 py-3 text-primary text-uppercase mb-4 ms-4" style="background-color: antiquewhite;">Clear Cart</button>
             </ol>
         </div>
         <!-- Single Page Header End -->
@@ -131,11 +128,11 @@
                             <th scope="col">Handle</th>
                           </tr>
                         </thead>
-                        <tbody>
-                            <tr>
+                        <tbody style="display: none;" id="cart-tabel">
+                            <tr id="product-Banana" class="bananavisible">
                                 <th scope="row">
                                     <div class="d-flex align-items-center">
-                                        <img src="img/vegetable-item-3.png" class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt="">
+                                        <img src="img/fruite-item-3.jpg" class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt="">
                                     </div>
                                 </th>
                                 <td>
@@ -169,14 +166,14 @@
                                 </td>
                             
                             </tr>
-                            <tr>
+                            <tr id="product-Grapes" class="grapesvisible">
                                 <th scope="row">
                                     <div class="d-flex align-items-center">
-                                        <img src="img/vegetable-item-5.jpg" class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt="" alt="">
+                                        <img src="img/fruite-item-5.jpg" class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt="" alt="">
                                     </div>
                                 </th>
                                 <td>
-                                    <p class="mb-0 mt-4">Potatoes</p>
+                                    <p class="mb-0 mt-4">Grapes</p>
                                 </td>
                                 <td>
                                     <p class="mb-0 mt-4">2.99 $</p>
@@ -205,14 +202,158 @@
                                     </button>
                                 </td>
                             </tr>
-                            <tr>
+                            <tr id="product-Raspberries" class="raspberriesvisible">
+                                <th scope="row">
+                                    <div class="d-flex align-items-center">
+                                        <img src="img/fruite-item-2.jpg" class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt="" alt="">
+                                    </div>
+                                </th>
+                                <td>
+                                    <p class="mb-0 mt-4"> raspberries</p>
+                                </td>
+                                <td>
+                                    <p class="mb-0 mt-4">2.99 $</p>
+                                </td>
+                                <td>
+                                    <div class="input-group quantity mt-4" style="width: 100px;">
+                                        <div class="input-group-btn">
+                                            <button class="btn btn-sm btn-minus rounded-circle bg-light border" >
+                                            <i class="fa fa-minus"></i>
+                                            </button>
+                                        </div>
+                                        <input type="text" class="form-control form-control-sm text-center border-0" value="1">
+                                        <div class="input-group-btn">
+                                            <button class="btn btn-sm btn-plus rounded-circle bg-light border">
+                                                <i class="fa fa-plus"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <p class="mb-0 mt-4">2.99 $</p>
+                                </td>
+                                <td>
+                                    <button class="btn btn-md rounded-circle bg-light border mt-4" >
+                                        <i class="fa fa-times text-danger"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr id="product-Apricots" class="apricotsvisible">
+                                <th scope="row">
+                                    <div class="d-flex align-items-center">
+                                        <img src="img/fruite-item-4.jpg" class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt="" alt="">
+                                    </div>
+                                </th>
+                                <td>
+                                    <p class="mb-0 mt-4">Apricots</p>
+                                </td>
+                                <td>
+                                    <p class="mb-0 mt-4">2.99 $</p>
+                                </td>
+                                <td>
+                                    <div class="input-group quantity mt-4" style="width: 100px;">
+                                        <div class="input-group-btn">
+                                            <button class="btn btn-sm btn-minus rounded-circle bg-light border" >
+                                            <i class="fa fa-minus"></i>
+                                            </button>
+                                        </div>
+                                        <input type="text" class="form-control form-control-sm text-center border-0" value="1">
+                                        <div class="input-group-btn">
+                                            <button class="btn btn-sm btn-plus rounded-circle bg-light border">
+                                                <i class="fa fa-plus"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <p class="mb-0 mt-4">2.99 $</p>
+                                </td>
+                                <td>
+                                    <button class="btn btn-md rounded-circle bg-light border mt-4" >
+                                        <i class="fa fa-times text-danger"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr id="product-Oranges" class="orangesvisible">
+                                <th scope="row">
+                                    <div class="d-flex align-items-center">
+                                        <img src="img/fruite-item-1.jpg" class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt="" alt="">
+                                    </div>
+                                </th>
+                                <td>
+                                    <p class="mb-0 mt-4">oranges</p>
+                                </td>
+                                <td>
+                                    <p class="mb-0 mt-4">2.99 $</p>
+                                </td>
+                                <td>
+                                    <div class="input-group quantity mt-4" style="width: 100px;">
+                                        <div class="input-group-btn">
+                                            <button class="btn btn-sm btn-minus rounded-circle bg-light border" >
+                                            <i class="fa fa-minus"></i>
+                                            </button>
+                                        </div>
+                                        <input type="text" class="form-control form-control-sm text-center border-0" value="1">
+                                        <div class="input-group-btn">
+                                            <button class="btn btn-sm btn-plus rounded-circle bg-light border">
+                                                <i class="fa fa-plus"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <p class="mb-0 mt-4">2.99 $</p>
+                                </td>
+                                <td>
+                                    <button class="btn btn-md rounded-circle bg-light border mt-4" >
+                                        <i class="fa fa-times text-danger"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr id="product-Brocoli" class="brocolivisible">
                                 <th scope="row">
                                     <div class="d-flex align-items-center">
                                         <img src="img/vegetable-item-2.jpg" class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt="" alt="">
                                     </div>
                                 </th>
                                 <td>
-                                    <p class="mb-0 mt-4">Awesome Brocoli</p>
+                                    <p class="mb-0 mt-4">Brocoli</p>
+                                </td>
+                                <td>
+                                    <p class="mb-0 mt-4">2.99 $</p>
+                                </td>
+                                <td>
+                                    <div class="input-group quantity mt-4" style="width: 100px;">
+                                        <div class="input-group-btn">
+                                            <button class="btn btn-sm btn-minus rounded-circle bg-light border" >
+                                            <i class="fa fa-minus"></i>
+                                            </button>
+                                        </div>
+                                        <input type="text" class="form-control form-control-sm text-center border-0" value="1">
+                                        <div class="input-group-btn">
+                                            <button class="btn btn-sm btn-plus rounded-circle bg-light border">
+                                                <i class="fa fa-plus"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <p class="mb-0 mt-4">2.99 $</p>
+                                </td>
+                                <td>
+                                    <button class="btn btn-md rounded-circle bg-light border mt-4" >
+                                        <i class="fa fa-times text-danger"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr id="product-Potato" class="potatovisible">
+                                <th scope="row">
+                                    <div class="d-flex align-items-center">
+                                        <img src="img/vegetable-item-5.jpg" class="img-fluid me-5 rounded-circle" style="width: 80px; height: 80px;" alt="" alt="">
+                                    </div>
+                                </th>
+                                <td>
+                                    <p class="mb-0 mt-4">Potato</p>
                                 </td>
                                 <td>
                                     <p class="mb-0 mt-4">2.99 $</p>
@@ -264,7 +405,7 @@
                                         <p class="mb-0">Flat rate: $3.00</p>
                                     </div>
                                 </div>
-                                <p class="mb-0 text-end">Shipping to Ukraine.</p>
+                                <p class="mb-0 text-end">Shipping to India.</p>
                             </div>
                             <div class="py-4 mb-4 border-top border-bottom d-flex justify-content-between">
                                 <h5 class="mb-0 ps-4 me-4">Total</h5>
@@ -371,8 +512,55 @@
             </div>
         </div>
         <!-- Copyright End -->
+        <script>
+           
+     var trigger = document.querySelector("#clearcart");
+     
+ 
+     
+     function windowOnClick(event) {
+     
+         if(event.target=== trigger){
+             localStorage.removeItem('cart');
+             location.reload();
+         }
+     }
+     
+  
+     window.addEventListener("click", windowOnClick);
+     //document.querySelector('#clearcart').addEventListener('click',localStorage.removeItem('cart'));
+             </script>
+        <script>
+            function checkCartAndShowModal() {
+  const cart = JSON.parse(localStorage.getItem('cart')) || {};
 
+  // Assuming your product elements have an id attribute matching the product key in the cart
+  const productElements = document.querySelectorAll('[id^="product-"]');
 
+  productElements.forEach(product => {
+    const productId = product.id.replace('product-', ''); // Extract product ID from element ID
+
+    // Check if product ID exists in cart before accessing quantity
+    if (cart.hasOwnProperty(productId)) {
+        document.querySelector('[id="cart-tabel"]').setAttribute('style','display:contents')
+      console.log('adii', cart[productId], 'test', cart[productId].quantity);
+      if (cart[productId].quantity > 0) {
+        product.classList.add('show-fruit-modal');
+       
+      } else {
+        product.classList.remove('show-fruit-modal');
+      }
+    } else {
+      // Handle the case where product ID is not in cart (optional)
+      console.log(`Product with ID ${productId} not found in cart`);
+    }
+  });
+}
+
+// Call the function to check cart and update modal visibility
+checkCartAndShowModal();
+//document.querySelector('#clearcart').addEventListener('click',localStorage.removeItem('cart'));
+        </script>
 
         <!-- Back to Top -->
         <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
